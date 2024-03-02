@@ -175,22 +175,22 @@ public class MSButton
     public void draw () 
     {    
       if (marked)
-            fill(0);
+            fill(255);
          
          else if( !marked && clicked && bombs.contains(this) ) 
-             fill(255,0,0);
+             fill(0,0,255);
          else if( marked && bombs.contains(this) ) 
-             fill(100);
-         else if( !marked && clicked && !bombs.contains(this) ) 
              fill(200);
+         else if( !marked && clicked && !bombs.contains(this) ) 
+             fill(100);
              
         else if(clicked)
-            fill( 200 );
-        else 
             fill( 100 );
+        else 
+            fill( 200 );
 
         rect(x, y, width, height);
-        fill(0);
+        fill(255);
         text(label,x+width/2,y+height/2);
     }
     public void setLabel(String newLabel)
